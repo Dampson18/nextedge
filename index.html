@@ -3,30 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NextEdge — Creative Tech Studio</title>
+  <title>NextEdge — Creative Tech Studio | Web Design & IT Support Ghana</title>
+  <meta name="description" content="NextEdge IT & Design: Modern websites, graphic design, and IT support in Accra, Ghana. We help brands stand out with creative tech solutions.">
+  <meta name="keywords" content="web design Ghana, IT support Accra, graphic design, website development, creative tech studio">
+  <meta name="author" content="NextEdge IT & Design">
+  <meta property="og:title" content="NextEdge — Your Edge in Creative Tech Solutions">
+  <meta property="og:description" content="Modern websites, striking visuals, and smart IT support for your brand.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
   <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/jpg" href="assets/images/nextedge-logo.jpg">
 </head>
 <body data-page="home">
   <div class="cursor-glow" id="cursorGlow"></div>
+  
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
 
   <nav id="navbar">
-    <a href="index.html" class="nav-logo">Next<span>Edge</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html#hero">Home</a></li>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/nextedge-logo.jpg" alt="NextEdge Logo" style="height:40px; width:auto;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#hero" class="active">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">Get In Touch</a>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+  <i class="fas fa-moon"></i>
+</button>
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
     </div>
   </nav>
 
   <main>
+    <!-- Hero Section -->
     <section id="hero" class="page-hero">
       <div class="hero-grid"></div>
       <div class="hero-glow"></div>
@@ -45,6 +65,7 @@
       </div>
     </section>
 
+    <!-- Marquee Services -->
     <section class="marquee-wrapper">
       <div class="marquee-track">
         <div class="marquee-item"><span class="marquee-dot"></span> Web Development</div>
@@ -52,16 +73,19 @@
         <div class="marquee-item"><span class="marquee-dot"></span> IT Support</div>
         <div class="marquee-item"><span class="marquee-dot"></span> Brand Identity</div>
         <div class="marquee-item"><span class="marquee-dot"></span> Flyer Design</div>
+        <div class="marquee-item"><span class="marquee-dot"></span> Social Media Management</div>
+        <div class="marquee-item"><span class="marquee-dot"></span> Content Creation</div>
+        <div class="marquee-item"><span class="marquee-dot"></span> Photography</div>
         <div class="marquee-item"><span class="marquee-dot"></span> Digital Strategy</div>
         <div class="marquee-item"><span class="marquee-dot"></span> UI/UX Design</div>
         <div class="marquee-item"><span class="marquee-dot"></span> SEO & Performance</div>
         <div class="marquee-item"><span class="marquee-dot"></span> Web Development</div>
         <div class="marquee-item"><span class="marquee-dot"></span> Graphic Design</div>
         <div class="marquee-item"><span class="marquee-dot"></span> IT Support</div>
-        <div class="marquee-item"><span class="marquee-dot"></span> Brand Identity</div>
       </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services" class="section-block">
       <div class="section-header reveal">
         <span class="section-label">What We Do</span>
@@ -69,26 +93,38 @@
         <p class="section-copy">From pixel-perfect designs to robust technical solutions, we cover every layer of your digital needs.</p>
       </div>
       <div class="services-grid reveal" style="transition-delay:.08s">
+        
         <article class="service-card">
-          <div class="service-icon svc-color-1">🌐</div>
+          <div class="service-icon svc-color-1">
+            <i class="fas fa-code"></i>
+          </div>
           <h3>Website Development</h3>
           <p>Modern, responsive, and fast websites that elevate your brand. From portfolios and landing pages to full business sites with CMS integration.</p>
           <a href="contact.html" class="service-link">Start a project →</a>
         </article>
+        
         <article class="service-card">
-          <div class="service-icon svc-color-2">🎨</div>
+          <div class="service-icon svc-color-2">
+            <i class="fas fa-palette"></i>
+          </div>
           <h3>Graphic & Flyer Design</h3>
           <p>Eye-catching flyers, social media graphics, posters and brand identity materials that make your business impossible to ignore.</p>
           <a href="contact.html" class="service-link">Request a design →</a>
         </article>
+        
         <article class="service-card">
-          <div class="service-icon svc-color-4">🎬</div>
+          <div class="service-icon svc-color-3">
+            <i class="fas fa-video"></i>
+          </div>
           <h3>Content & Media</h3>
           <p>Video shoots, social media management, and content creation that keeps your brand visible and memorable across platforms.</p>
           <a href="contact.html" class="service-link">Create content →</a>
         </article>
+        
         <article class="service-card">
-          <div class="service-icon svc-color-3">🛠️</div>
+          <div class="service-icon svc-color-4">
+            <i class="fas fa-headset"></i>
+          </div>
           <h3>IT Support</h3>
           <p>Reliable technical support, system troubleshooting, network setup, and smart IT consulting for individuals and growing businesses.</p>
           <a href="contact.html" class="service-link">Get support →</a>
@@ -96,6 +132,7 @@
       </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="section-block section-surface">
       <div class="section-header reveal">
         <span class="section-label">About NextEdge</span>
@@ -105,24 +142,29 @@
       <div class="about-preview reveal" style="transition-delay:.08s">
         <div class="about-preview-list">
           <div class="about-preview-card">
+            <i class="fas fa-check-circle" style="color:var(--accent); margin-right:0.75rem;"></i>
             <span>Custom websites tailored to your brand identity and business goals</span>
           </div>
           <div class="about-preview-card">
+            <i class="fas fa-check-circle" style="color:var(--accent); margin-right:0.75rem;"></i>
             <span>Striking visual design that captures attention and converts audiences</span>
           </div>
           <div class="about-preview-card">
+            <i class="fas fa-check-circle" style="color:var(--accent); margin-right:0.75rem;"></i>
             <span>Reliable IT support keeping your operations running smoothly</span>
           </div>
           <div class="about-preview-card">
+            <i class="fas fa-check-circle" style="color:var(--accent); margin-right:0.75rem;"></i>
             <span>End-to-end partnership from concept through launch and beyond</span>
           </div>
         </div>
         <div class="about-preview-cta">
-          <a href="about.html" class="btn-secondary">Learn More</a>
+          <a href="about.html" class="btn-secondary">Learn More About Us →</a>
         </div>
       </div>
     </section>
 
+    <!-- Portfolio Section -->
     <section id="portfolio" class="section-block">
       <div class="section-header reveal">
         <span class="section-label">Portfolio</span>
@@ -130,40 +172,57 @@
         <p class="section-copy">Case studies from creative brands, service businesses, and digital events. Every project is crafted to perform.</p>
       </div>
       <div class="portfolio-grid reveal" style="transition-delay:.08s">
+        
         <article class="portfolio-card">
-          <div class="portfolio-thumb portfolio-thumb-web">💻</div>
+          <div class="portfolio-thumb portfolio-thumb-web">
+            <i class="fas fa-ticket-alt"></i>
+          </div>
           <div class="portfolio-copy">
             <span class="portfolio-tag">Web App · IT Support</span>
             <h3>HelpPro — Support System</h3>
+            <p>Comprehensive ticketing platform for IT teams</p>
           </div>
         </article>
+        
         <article class="portfolio-card">
-          <div class="portfolio-thumb portfolio-thumb-portfolio">🎯</div>
+          <div class="portfolio-thumb portfolio-thumb-portfolio">
+            <i class="fas fa-bezier-curve"></i>
+          </div>
           <div class="portfolio-copy">
             <span class="portfolio-tag">Website · Portfolio</span>
             <h3>CreativeEdge — Portfolio Site</h3>
+            <p>Modern portfolio showcasing creative work</p>
           </div>
         </article>
+        
         <article class="portfolio-card">
-          <div class="portfolio-thumb portfolio-thumb-corp">🏢</div>
+          <div class="portfolio-thumb portfolio-thumb-corp">
+            <i class="fas fa-building"></i>
+          </div>
           <div class="portfolio-copy">
             <span class="portfolio-tag">Corporate · Website</span>
             <h3>NextCorp — Business Website</h3>
+            <p>Enterprise-level corporate solution</p>
           </div>
         </article>
+        
         <article class="portfolio-card">
-          <div class="portfolio-thumb portfolio-thumb-event">📣</div>
+          <div class="portfolio-thumb portfolio-thumb-event">
+            <i class="fas fa-chart-line"></i>
+          </div>
           <div class="portfolio-copy">
             <span class="portfolio-tag">Graphic Design · Event</span>
             <h3>TechX Summit — Event Flyer</h3>
+            <p>Viral marketing materials for tech conference</p>
           </div>
         </article>
       </div>
       <div class="section-actions reveal" style="transition-delay:.12s">
-        <a href="portfolio.html" class="btn-primary">View Full Portfolio</a>
+        <a href="portfolio.html" class="btn-primary">View Full Portfolio →</a>
       </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section id="testimonials" class="section-block section-surface">
       <div class="section-header reveal">
         <span class="section-label">Client Reviews</span>
@@ -171,54 +230,67 @@
       </div>
       <div class="testimonials-grid reveal" style="transition-delay:.08s">
         <article class="testimonial-card">
+          <i class="fas fa-quote-left" style="color:var(--accent); font-size:2rem; opacity:0.5; margin-bottom:1rem;"></i>
           <p>NextEdge completely transformed our digital presence. The website was exactly what we needed — beautiful, fast, and perfectly on-brand.</p>
-          <span class="testimonial-author">Sarah Williams, Founder of BrandCo</span>
+          <span class="testimonial-author">— Sarah Williams, Founder of BrandCo</span>
         </article>
         <article class="testimonial-card">
+          <i class="fas fa-quote-left" style="color:var(--accent); font-size:2rem; opacity:0.5; margin-bottom:1rem;"></i>
           <p>Their IT support team is incredibly responsive. We've had zero downtime since working with NextEdge — they solved problems we didn't even know we had.</p>
-          <span class="testimonial-author">John Adams, CEO of TechFlow Ltd</span>
+          <span class="testimonial-author">— John Adams, CEO of TechFlow Ltd</span>
         </article>
         <article class="testimonial-card">
+          <i class="fas fa-quote-left" style="color:var(--accent); font-size:2rem; opacity:0.5; margin-bottom:1rem;"></i>
           <p>Our event flyers and social media graphics went viral. NextEdge truly understands how to make a brand stand out.</p>
-          <span class="testimonial-author">Emily Thompson, Marketing Director of PulseMG</span>
+          <span class="testimonial-author">— Emily Thompson, Marketing Director</span>
         </article>
       </div>
     </section>
 
+    <!-- Stats Section -->
     <section id="stats" class="section-block stats-block">
       <div class="stats-grid reveal">
         <div class="stat-item">
-          <span class="stat-num" data-count="10">0</span>
+          <span class="stat-num" data-count="15">0</span>
           <span>Projects Completed</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num" data-count="7">0</span>
+          <span class="stat-num" data-count="12">0</span>
           <span>Happy Clients</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-num" data-count="3">0</span>
           <span>Industry Awards</span>
         </div>
       </div>
     </section>
 
-    <section class="section-block section-callout reveal" style="transition-delay:.08s">
-      <div>
+    <!-- CTA Section -->
+    <section class="section-block section-callout reveal">
+      <div style="text-align:center; max-width:700px; margin:0 auto;">
         <span class="section-label">Ready to grow?</span>
         <h2 class="section-title">Start your next project with NextEdge</h2>
         <p class="section-copy">A custom website, bold branding, or technical support — we help teams build digital experiences that perform.</p>
-      </div>
-      <div class="section-actions">
-        <a href="contact.html" class="btn-primary">Contact Us</a>
+        <div class="section-actions" style="margin-top:2rem;">
+          <a href="contact.html" class="btn-primary">Start a Project →</a>
+          <a href="tel:+233204242615" class="btn-secondary"><i class="fas fa-phone"></i> Call Us</a>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-top">
       <div>
         <a href="index.html" class="nav-logo">Next<span>Edge</span></a>
         <p>NextEdge IT & Design — your creative tech partner in Accra, Ghana. Building the digital future, one project at a time.</p>
+        <div class="social-links" style="display:flex; gap:1rem; margin-top:1.5rem;">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
       </div>
       <div>
         <h4>Navigate</h4>
@@ -232,22 +304,89 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="#">Accra, Ghana</a></li>
-          <li><a href="tel:+233204242615">+233 204 242 615</a></li>
-          <li><a href="mailto:kelvinfaraday15@gmail.com">Email Us</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> Accra, Ghana</a></li>
+          <li><a href="tel:+233204242615"><i class="fas fa-phone"></i> +233 204 242 615</a></li>
+          <li><a href="mailto:kelvinfaraday15@gmail.com"><i class="fas fa-envelope"></i> Email Us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2025 NextEdge IT & Design. All rights reserved.</span>
-      <div class="social-links">
-        <a href="#">in</a>
-        <a href="#">𝕏</a>
-        <a href="#">ig</a>
-      </div>
+      <span>Built with <i class="fas fa-heart" style="color:var(--accent);"></i> in Accra</span>
     </div>
   </footer>
 
+  <!-- Floating Elements -->
+  <a href="https://wa.me/233204242615" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  
+  <script>
+    // Loader hide
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');
+      if(loader) {
+        setTimeout(() => {
+          loader.classList.add('hidden');
+        }, 500);
+      }
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    if(backToTop) {
+      window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+      
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Stats Counter Animation
+    const statNumbers = document.querySelectorAll('.stat-num');
+    const animateStats = () => {
+      statNumbers.forEach(stat => {
+        const target = parseInt(stat.getAttribute('data-count'));
+        let current = 0;
+        const increment = target / 50;
+        const updateCounter = () => {
+          if(current < target) {
+            current += increment;
+            stat.textContent = Math.floor(current);
+            setTimeout(updateCounter, 30);
+          } else {
+            stat.textContent = target;
+          }
+        };
+        updateCounter();
+      });
+    };
+
+    // Trigger stats when visible
+    const statsSection = document.querySelector('#stats');
+    if(statsSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            animateStats();
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      observer.observe(statsSection);
+    }
+  </script>
 </body>
 </html>

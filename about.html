@@ -3,34 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — NextEdge</title>
+  <title>About — NextEdge | Creative Tech Studio in Accra, Ghana</title>
+  <meta name="description" content="Learn about NextEdge IT & Design — a creative tech studio in Accra, Ghana blending design, development, and IT support to help brands stand out.">
+  <meta name="keywords" content="about NextEdge, creative tech studio Accra, web design company Ghana, IT support team">
+  <meta property="og:title" content="About NextEdge — Where creativity meets technology">
+  <meta property="og:description" content="We build bold brands with real technical muscle. Based in Accra, serving businesses worldwide.">
+  <meta property="og:type" content="website">
+  
   <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/jpg" href="assets/images/nextedge-logo.jpg">
 </head>
 <body data-page="about">
   <div class="cursor-glow" id="cursorGlow"></div>
+  
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
   <nav id="navbar">
-    <a href="index.html" class="nav-logo">Next<span>Edge</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html#hero">Home</a></li>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/nextedge-logo.jpg" alt="NextEdge Logo" style="height:40px; width:auto;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">Get In Touch</a>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+  <i class="fas fa-moon"></i>
+</button>
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
     </div>
   </nav>
 
   <main>
+    <!-- Hero Section -->
     <section class="page-hero page-hero-alt">
       <div class="hero-grid"></div>
       <div class="hero-glow"></div>
       <div class="hero-content hero-content-alt">
-        <span class="hero-label">Why NextEdge</span>
+        <span class="hero-label"><i class="fas fa-star" style="font-size:0.75rem;"></i> Why NextEdge</span>
         <h1>We build bold brands<br>with real technical muscle</h1>
         <p>NextEdge was founded to deliver exceptional digital experiences for local businesses and creative teams. Our work blends polished design with practical technology that scales.</p>
         <div class="hero-actions">
@@ -40,55 +59,113 @@
       </div>
     </section>
 
+    <!-- Our Story Section -->
     <section class="section-block">
       <div class="section-header reveal">
-        <span class="section-label">Our Story</span>
+        <span class="section-label"><i class="fas fa-book-open"></i> Our Story</span>
         <h2 class="section-title">Built for businesses that want to stand out</h2>
         <p class="section-copy">We partner with brands to create polished digital products, memorable visuals, and dependable support systems — all designed to grow your presence online.</p>
       </div>
       <div class="about-grid reveal" style="transition-delay:.08s">
         <div class="about-card-large">
+          <div class="about-icon">
+            <i class="fas fa-pen-fancy"></i>
+          </div>
           <h3>Design with purpose</h3>
           <p>Every pixel, layout and interaction is chosen to support your message while keeping your audience engaged across devices.</p>
         </div>
         <div class="about-card-large">
+          <div class="about-icon">
+            <i class="fas fa-microchip"></i>
+          </div>
           <h3>Technology that performs</h3>
           <p>Fast websites, smooth workflows, and systems that stay reliable even as your business grows.</p>
         </div>
         <div class="about-card-large">
+          <div class="about-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
           <h3>Support you can trust</h3>
           <p>From IT setup to troubleshooting, we keep your operations secure and working behind the scenes.</p>
         </div>
       </div>
     </section>
 
+    <!-- Our Values Section -->
     <section class="section-block section-surface reveal">
       <div class="section-header">
-        <span class="section-label">Our Values</span>
+        <span class="section-label"><i class="fas fa-gem"></i> Our Values</span>
         <h2 class="section-title">Simple, smart, and beautifully executed</h2>
       </div>
       <div class="values-grid">
         <article class="value-card">
-          <strong>01</strong>
+          <div class="value-number">01</div>
+          <i class="fas fa-lightbulb value-icon"></i>
           <h3>Creative clarity</h3>
           <p>We simplify complex ideas into visuals and user experiences that feel effortless.</p>
         </article>
         <article class="value-card">
-          <strong>02</strong>
+          <div class="value-number">02</div>
+          <i class="fas fa-code value-icon"></i>
           <h3>Technical craft</h3>
           <p>Clean code, reliable architecture, and performance-first design are part of every project.</p>
         </article>
         <article class="value-card">
-          <strong>03</strong>
+          <div class="value-number">03</div>
+          <i class="fas fa-users value-icon"></i>
           <h3>Client partnership</h3>
           <p>We listen, adapt, and deliver on time — with communication that keeps every project moving forward.</p>
         </article>
       </div>
     </section>
 
+    <!-- Journey Timeline Section - NEW -->
+    <section class="section-block">
+      <div class="section-header reveal">
+        <span class="section-label"><i class="fas fa-timeline"></i> Our Journey</span>
+        <h2 class="section-title">The NextEdge story</h2>
+        <p class="section-copy">From a bold idea to a trusted creative tech studio in Accra.</p>
+      </div>
+      <div class="timeline reveal" style="transition-delay:.08s">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h3>Founded in Accra</h3>
+            <p>NextEdge launched with a mission to bridge creativity and technology for Ghanaian businesses.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h3>First 10 Clients</h3>
+            <p>Helped local startups and established brands establish their digital presence.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2025</span>
+            <h3>Expanded Services</h3>
+            <p>Added IT support and content creation to offer complete digital solutions.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2025</span>
+            <h3>Looking Ahead</h3>
+            <p>Growing team, bigger projects, and continued commitment to excellence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
     <section class="section-block reveal" style="transition-delay:.08s">
       <div class="section-header">
-        <span class="section-label">Experience</span>
+        <span class="section-label"><i class="fas fa-chart-line"></i> Experience</span>
         <h2 class="section-title">A creative studio with a technical edge</h2>
       </div>
       <div class="about-visual-panel">
@@ -98,28 +175,101 @@
             <span>Experience</span>
           </div>
           <p>We started in Accra with a simple goal: create memorable digital experiences for businesses that want more than just a website. Today, our team blends design, development, and IT care into one easy partnership.</p>
-          <a href="portfolio.html" class="btn-secondary">See our work</a>
+          <div class="experience-stats">
+            <div class="exp-stat">
+              <span class="exp-number">15+</span>
+              <span class="exp-label">Projects</span>
+            </div>
+            <div class="exp-stat">
+              <span class="exp-number">12+</span>
+              <span class="exp-label">Happy Clients</span>
+            </div>
+            <div class="exp-stat">
+              <span class="exp-number">100%</span>
+              <span class="exp-label">Dedication</span>
+            </div>
+          </div>
+          <a href="portfolio.html" class="btn-secondary">See our work <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="about-visual-frame"></div>
+        <div class="about-visual-frame">
+          <i class="fas fa-laptop-code"></i>
+        </div>
       </div>
     </section>
 
-    <section class="section-block section-callout reveal" style="transition-delay:.12s">
-      <div>
-        <span class="section-label">Ready to grow?</span>
-        <h2 class="section-title">Let’s shape the next chapter of your brand</h2>
+    <!-- Team Section - NEW -->
+    <section class="section-block section-surface">
+      <div class="section-header reveal">
+        <span class="section-label"><i class="fas fa-users"></i> The Team</span>
+        <h2 class="section-title">The creative minds behind NextEdge</h2>
+        <p class="section-copy">A small but mighty team dedicated to your success.</p>
       </div>
-      <div class="section-actions">
-        <a href="contact.html" class="btn-primary">Get in Touch</a>
+      <div class="team-grid reveal" style="transition-delay:.08s">
+        <div class="team-card">
+          <div class="team-avatar">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <h3>Kelvin Faraday</h3>
+          <span class="team-role">Founder & Creative Director</span>
+          <p>Leading the vision, design strategy, and client relationships.</p>
+          <div class="team-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <h3>Sarah Mensah</h3>
+          <span class="team-role">Lead Designer</span>
+          <p>Crafting beautiful visuals and brand identities.</p>
+          <div class="team-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <h3>Michael Osei</h3>
+          <span class="team-role">IT Support Lead</span>
+          <p>Keeping systems running smoothly and securely.</p>
+          <div class="team-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-block section-callout reveal" style="transition-delay:.12s">
+      <div style="text-align:center; max-width:700px; margin:0 auto;">
+        <span class="section-label"><i class="fas fa-rocket"></i> Ready to grow?</span>
+        <h2 class="section-title">Let's shape the next chapter of your brand</h2>
+        <p class="section-copy">Whether you need a website, branding, or IT support — we're here to help.</p>
+        <div class="section-actions" style="margin-top:2rem;">
+          <a href="contact.html" class="btn-primary">Get in Touch <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+233204242615" class="btn-secondary"><i class="fas fa-phone"></i> Call Us</a>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-top">
       <div>
         <a href="index.html" class="nav-logo">Next<span>Edge</span></a>
         <p>NextEdge IT & Design — your creative tech partner in Accra, Ghana. Building the digital future, one project at a time.</p>
+        <div class="social-links" style="display:flex; gap:1rem; margin-top:1.5rem;">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
       </div>
       <div>
         <h4>Navigate</h4>
@@ -133,22 +283,55 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="#">Accra, Ghana</a></li>
-          <li><a href="tel:+233204242615">+233 204 242 615</a></li>
-          <li><a href="mailto:kelvinfaraday15@gmail.com">Email Us</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> Accra, Ghana</a></li>
+          <li><a href="tel:+233204242615"><i class="fas fa-phone"></i> +233 204 242 615</a></li>
+          <li><a href="mailto:kelvinfaraday15@gmail.com"><i class="fas fa-envelope"></i> Email Us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2025 NextEdge IT & Design. All rights reserved.</span>
-      <div class="social-links">
-        <a href="#">in</a>
-        <a href="#">𝕏</a>
-        <a href="#">ig</a>
-      </div>
+      <span>Built with <i class="fas fa-heart" style="color:var(--accent);"></i> in Accra</span>
     </div>
   </footer>
 
+  <!-- Floating Elements -->
+  <a href="https://wa.me/233204242615" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  
+  <script>
+    // Loader hide
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');
+      if(loader) {
+        setTimeout(() => {
+          loader.classList.add('hidden');
+        }, 500);
+      }
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    if(backToTop) {
+      window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+      
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
 </body>
 </html>
