@@ -30,7 +30,7 @@ if (reveals.length) {
 
 // ===== STATS COUNTER ANIMATION =====
 const counters = document.querySelectorAll('.stat-num[data-count]');
-if (counters.length) {
+if (counters.length && document.body.dataset.page !== 'home') {
   const counterObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
@@ -88,15 +88,18 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
+  const toggleNavigation = () => {
     navLinks.classList.toggle('open');
-  });
+    hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+  };
+  hamburger.addEventListener('click', toggleNavigation);
   
   // Close menu when clicking a link
   const links = navLinks.querySelectorAll('a');
   links.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
     });
   });
 }
@@ -173,39 +176,52 @@ if (themeToggle) {
 // ===== CONTACT FORM HANDLER =====
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', event => {
+  contactForm.addEventListener('submit', async event => {
     event.preventDefault();
-    
-    // Get form values
-    const firstName = contactForm.querySelector('input[placeholder="Kwame"]')?.value;
-    const lastName = contactForm.querySelector('input[placeholder="Mensah"]')?.value;
-    const email = contactForm.querySelector('input[type="email"]')?.value;
-    const service = contactForm.querySelector('select')?.value;
-    
-    // Simple validation
-    if (!firstName || !lastName || !email || !service) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-    
+    if (!contactForm.reportValidity()) return;
+
     const submitButton = contactForm.querySelector('button[type="submit"]');
+    const formNote = contactForm.querySelector('.form-note');
+    const formStatus = contactForm.querySelector('.form-status');
+    if (formStatus) formStatus.textContent = '';
     if (submitButton) {
-      const originalText = submitButton.innerHTML;
-      submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent ✓';
-      submitButton.style.background = '#2a9d5c';
-      setTimeout(() => {
-        submitButton.innerHTML = originalText;
-        submitButton.style.background = '';
-      }, 3000);
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
     }
-    contactForm.reset();
+
+    try {
+      const response = await fetch(contactForm.dataset.ajaxAction || contactForm.action, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm).entries()))
+      });
+      const result = await response.json();
+      if (!response.ok || (result.success !== true && result.success !== 'true')) {
+        throw new Error(result.message || 'The email service could not accept the message.');
+      }
+
+      const successModal = document.getElementById('successModal');
+      if (successModal) successModal.classList.add('show');
+      contactForm.reset();
+      if (formNote) formNote.textContent = 'Thanks — your message has been sent to NextEdge.';
+    } catch (error) {
+      if (error instanceof TypeError) {
+        // Use the provider's regular form flow if the browser blocks the AJAX request.
+        HTMLFormElement.prototype.submit.call(contactForm);
+        return;
+      }
+      if (formStatus) {
+        formStatus.textContent = 'We could not send your message. Please try again or email nextedgedesign.25@gmail.com.';
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      }
+    }
   });
 }
 
@@ -231,7 +247,7 @@ if (faqItems.length) {
 
 // ===== SERVICES FAQ ACCORDION =====
 const servicesFaqItems = document.querySelectorAll('.services-faq-item');
-if (servicesFaqItems.length) {
+if (servicesFaqItems.length && document.body.dataset.page !== 'services') {
   servicesFaqItems.forEach(item => {
     const question = item.querySelector('.services-faq-question');
     if (question) {
@@ -251,7 +267,7 @@ if (servicesFaqItems.length) {
 const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioItems = document.querySelectorAll('.portfolio-card');
 
-if (filterButtons.length && portfolioItems.length) {
+if (filterButtons.length && portfolioItems.length && document.body.dataset.page !== 'portfolio') {
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
       // Update active button
@@ -358,7 +374,7 @@ const projects = {
 
 // Open modal with project details
 const viewProjectBtns = document.querySelectorAll('.view-project-btn');
-if (viewProjectBtns.length && modal && modalContent) {
+if (viewProjectBtns.length && modal && modalContent && document.body.dataset.page !== 'portfolio') {
   viewProjectBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();

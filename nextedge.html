@@ -1071,43 +1071,46 @@
     </div>
     <div class="contact-detail">
       <div class="contact-detail-icon">📞</div>
-      <span>+233 204 242 615</span>
+      <a href="tel:+233537775352">+233 53 777 5352</a>
     </div>
     <div class="contact-detail">
       <div class="contact-detail-icon">✉️</div>
-      <span>kelvinfaraday15@gmail.com</span>
+      <a href="mailto:nextedgedesign.25@gmail.com">nextedgedesign.25@gmail.com</a>
     </div>
 
     <div style="margin-top:2rem">
       <p style="font-size:.8rem;color:var(--muted);margin-bottom:.875rem;letter-spacing:.05em;text-transform:uppercase;font-weight:500">Follow Us</p>
       <div class="social-links">
-        <a href="#" class="social-link">in</a>
-        <a href="#" class="social-link">𝕏</a>
-        <a href="#" class="social-link">ig</a>
-        <a href="#" class="social-link">fb</a>
+        <a href="https://www.linkedin.com/search/results/companies/?keywords=NextEdge%20Tech%20Studio" class="social-link" aria-label="Find NextEdge on LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+        <a href="https://www.instagram.com/explore/search/keyword/?q=NextEdge%20Tech%20Studio" class="social-link" aria-label="Search NextEdge on Instagram" target="_blank" rel="noopener noreferrer">ig</a>
+        <a href="https://www.facebook.com/search/top?q=NextEdge%20Tech%20Studio" class="social-link" aria-label="Find NextEdge on Facebook" target="_blank" rel="noopener noreferrer">fb</a>
+        <a href="https://www.youtube.com/results?search_query=NextEdge+Tech+Studio" class="social-link" aria-label="Find NextEdge on YouTube" target="_blank" rel="noopener noreferrer">yt</a>
       </div>
     </div>
   </div>
 
-  <div class="contact-form reveal" style="transition-delay:.15s">
+  <form class="contact-form reveal" style="transition-delay:.15s" action="https://formsubmit.co/nextedgedesign.25@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New NextEdge website enquiry">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
     <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:600;color:var(--white);margin-bottom:1.75rem">Send us a message</h3>
     <div class="form-row">
       <div class="form-group">
         <label>First Name</label>
-        <input type="text" placeholder="Kwame">
+        <input type="text" name="first_name" placeholder="Kwame" required>
       </div>
       <div class="form-group">
         <label>Last Name</label>
-        <input type="text" placeholder="Mensah">
+        <input type="text" name="last_name" placeholder="Mensah" required>
       </div>
     </div>
     <div class="form-group">
       <label>Email Address</label>
-      <input type="email" placeholder="you@example.com">
+      <input type="email" name="email" placeholder="you@example.com" required>
     </div>
     <div class="form-group">
       <label>Service Needed</label>
-      <select style="background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:2px;padding:.875rem 1rem;color:var(--white);font-family:var(--font-body);font-size:.9375rem;width:100%;outline:none;appearance:none">
+      <select name="service" required style="background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:2px;padding:.875rem 1rem;color:var(--white);font-family:var(--font-body);font-size:.9375rem;width:100%;outline:none;appearance:none">
         <option value="" style="background:#1a1a1a">Select a service...</option>
         <option style="background:#1a1a1a">Website Development</option>
         <option style="background:#1a1a1a">Graphic & Flyer Design</option>
@@ -1117,10 +1120,11 @@
     </div>
     <div class="form-group">
       <label>Message</label>
-      <textarea rows="4" placeholder="Tell us about your project..."></textarea>
+      <textarea name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
     </div>
-    <button class="btn-primary" style="width:100%;padding:1rem" onclick="this.textContent='Message Sent ✓';this.style.background='#2a9d5c';setTimeout(()=>{this.textContent='Send Message';this.style.background=''},3000)">Send Message</button>
-  </div>
+    <button type="submit" class="btn-primary" style="width:100%;padding:1rem">Send Message</button>
+    <p style="margin-top:1rem;color:var(--muted);font-size:.8rem">Messages are delivered to nextedgedesign.25@gmail.com. The inbox owner must confirm FormSubmit’s first activation email.</p>
+  </form>
 </section>
 
 <!-- FOOTER -->
@@ -1128,7 +1132,7 @@
   <div class="footer-top">
     <div class="footer-brand">
       <a href="#hero" class="nav-logo" style="font-size:1.5rem">Next<span>Edge</span></a>
-      <p>NextEdge IT &amp; Design — your creative tech partner in Accra, Ghana. Building the digital future, one project at a time.</p>
+      <p>NextEdge Tech Studio — your creative tech partner in Accra, Ghana. Building the digital future, one project at a time.</p>
     </div>
     <div class="footer-col">
       <h4>Navigation</h4>
@@ -1137,6 +1141,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="property.html">NextEdge Property</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -1152,18 +1157,18 @@
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="#">Accra, Ghana</a></li>
-        <li><a href="tel:+233204242615">+233 204 242 615</a></li>
-        <li><a href="mailto:kelvinfaraday15@gmail.com">Email Us</a></li>
+        <li><a href="https://maps.google.com/?q=Accra+Ghana" target="_blank" rel="noopener noreferrer">Accra, Ghana</a></li>
+        <li><a href="tel:+233537775352">+233 53 777 5352</a></li>
+        <li><a href="mailto:nextedgedesign.25@gmail.com">nextedgedesign.25@gmail.com</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 NextEdge IT &amp; Design. All rights reserved.</span>
+    <span>© 2026 NextEdge Tech Studio. All rights reserved.</span>
     <div class="social-links">
-      <a href="#" class="social-link">in</a>
-      <a href="#" class="social-link">𝕏</a>
-      <a href="#" class="social-link">ig</a>
+      <a href="https://www.linkedin.com/search/results/companies/?keywords=NextEdge%20Tech%20Studio" class="social-link" aria-label="Find NextEdge on LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+      <a href="https://www.instagram.com/explore/search/keyword/?q=NextEdge%20Tech%20Studio" class="social-link" aria-label="Search NextEdge on Instagram" target="_blank" rel="noopener noreferrer">ig</a>
+      <a href="https://www.youtube.com/results?search_query=NextEdge+Tech+Studio" class="social-link" aria-label="Find NextEdge on YouTube" target="_blank" rel="noopener noreferrer">yt</a>
     </div>
   </div>
 </footer>
